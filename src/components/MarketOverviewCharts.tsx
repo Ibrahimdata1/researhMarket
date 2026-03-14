@@ -185,7 +185,7 @@ export function OpportunityMatrixChart() {
         มุมบนซ้าย = โอกาสสูง เข้าง่าย (Sweet spot สำหรับ startup)
       </p>
       <ResponsiveContainer width="100%" height={450}>
-        <ScatterChart margin={{ top: 20, right: 30, bottom: 20, left: 10 }}>
+        <ScatterChart margin={{ top: 20, right: 30, bottom: 40, left: 20 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis
             type="number"
@@ -195,7 +195,8 @@ export function OpportunityMatrixChart() {
             tick={{ fontSize: 11, fill: "#888" }}
             label={{
               value: "ความยากในการเข้าตลาด →",
-              position: "bottom",
+              position: "insideBottom",
+              offset: -20,
               fill: "#888",
               fontSize: 12,
             }}
@@ -210,6 +211,7 @@ export function OpportunityMatrixChart() {
               value: "คะแนนโอกาส →",
               angle: -90,
               position: "insideLeft",
+              offset: -5,
               fill: "#888",
               fontSize: 12,
             }}
@@ -231,22 +233,21 @@ export function OpportunityMatrixChart() {
               );
             }}
           />
-          <Legend content={() => (
-            <div className="flex items-center gap-4 justify-center mt-2 text-xs text-muted">
-              <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-green" />
-                <span>โอกาสสูง (Score ≥8)</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-accent" />
-                <span>โอกาสปานกลาง</span>
-              </div>
-              <span className="text-muted/60">ขนาดวงกลม = ขนาดตลาด</span>
-            </div>
-          )} />
           <Scatter data={data} shape={<CustomDot />} />
         </ScatterChart>
       </ResponsiveContainer>
+      {/* Legend outside chart to prevent overlap */}
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 justify-center mt-3 text-xs text-muted">
+        <div className="flex items-center gap-1.5">
+          <div className="w-3 h-3 rounded-full bg-green" />
+          <span>โอกาสสูง (Score ≥8)</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-3 h-3 rounded-full bg-accent" />
+          <span>โอกาสปานกลาง</span>
+        </div>
+        <span className="text-muted/60">ขนาดวงกลม = ขนาดตลาด</span>
+      </div>
     </div>
   );
 }
