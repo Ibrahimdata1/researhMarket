@@ -18,7 +18,7 @@ export default function Home() {
       <section className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-12">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-block px-3 py-1 rounded-full border border-accent/30 text-accent text-xs font-medium mb-6">
-            วิจัยตลาดเทคโนโลยีไทย 2024-2025
+            วิจัยตลาดเทคโนโลยีไทย 2025-2026 (ข้อมูลล่าสุด มี.ค. 2026)
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
             <span className="gradient-text">ส่องโอกาส</span> ธุรกิจ
@@ -53,27 +53,27 @@ export default function Home() {
         <div className="max-w-5xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
           {[
             {
-              label: "ตลาดออนไลน์ไทยทั้งหมด (ปี 2024)",
-              value: `$${ov.totalGMV2024}B`,
-              sub: `ประมาณ 1.7 ล้านล้านบาท โตขึ้น ${ov.growthRate}% ต่อปี`,
+              label: "ตลาดออนไลน์ไทย (ปี 2025)",
+              value: `$${ov.totalGMV2025}B`,
+              sub: `ประมาณ 1.9 ล้านล้านบาท โตขึ้น ${ov.growthRate}% จากปีก่อน`,
               color: "text-accent",
             },
             {
-              label: "สัดส่วนของเศรษฐกิจไทย",
-              value: `${ov.gdpContribution}%`,
-              sub: `เกือบ 1 ใน 4 ของ GDP ไทยมาจากดิจิทัล`,
+              label: "คนไทยออนไลน์",
+              value: `${ov.internetUsers}M`,
+              sub: `${ov.internetPenetration}% ของประชากร, 5G ครอบคลุม ${ov.fiveGCoverage}%`,
               color: "text-green",
             },
             {
-              label: "จำนวน Startup ในไทย",
-              value: `${ov.totalStartups.toLocaleString()}+`,
-              sub: `มี ${ov.unicorns} บริษัทที่มูลค่าเกินพันล้านดอลลาร์`,
+              label: "Startup ไทย & Unicorn",
+              value: `${ov.unicorns} Unicorn`,
+              sub: `Flash, LINE MAN, Ascend Money, Bitkub, OPN`,
               color: "text-blue",
             },
             {
-              label: "เงินลงทุนใน Startup ปี 2024",
-              value: `$${ov.seedFunding2024}M+`,
-              sub: `มากเป็นอันดับ ${ov.seaRanking} ในอาเซียน`,
+              label: "ลงทุน Data Center ปี 2025",
+              value: `$${ov.dataCenterInvestment}B`,
+              sub: `Google Cloud เปิดที่กรุงเทพ ม.ค. 2026`,
               color: "text-purple",
             },
           ].map((s) => (
@@ -120,30 +120,29 @@ export default function Home() {
             <div className="flex gap-2">
               <span className="text-accent shrink-0">1.</span>
               <span>
-                <strong className="text-foreground">ธุรกิจออนไลน์โตเร็วมาก</strong> — ตลาดดิจิทัลไทยโต 16% ต่อปี
-                ในขณะที่เศรษฐกิจทั่วไปโตแค่ 2.7% แปลว่าคนไทยย้ายมาใช้ออนไลน์เร็วมาก
+                <strong className="text-foreground">ดิจิทัลโตเร็วกว่าเศรษฐกิจ 3 เท่า</strong> — GDP ดิจิทัลไทยโต 6.2% ต่อปี
+                ในขณะที่เศรษฐกิจทั่วไปโตแค่ 2.4% (ปี 2025) — เงินย้ายมาออนไลน์เร็วมาก
               </span>
             </div>
             <div className="flex gap-2">
               <span className="text-accent shrink-0">2.</span>
               <span>
-                <strong className="text-foreground">คนไทย 92% ใช้จ่ายเงินออนไลน์แล้ว</strong> — พร้อมเพย์
-                มีคนลงทะเบียนกว่า 90 ล้านบัญชี และมีการโอนเงิน 74 ล้านครั้งต่อวัน
-                แปลว่าคนไทยพร้อมจ่ายเงินผ่านมือถือแล้ว
+                <strong className="text-foreground">3 ธนาคารดิจิทัลเปิดตัวกลางปี 2026</strong> — CP Group, กรุงไทย+AIS,
+                SCBX+KakaoBank ได้ใบอนุญาตแล้ว ต้องเปิดภายใน มิ.ย. 2026 — จะเขย่าวงการการเงินไทย
               </span>
             </div>
             <div className="flex gap-2">
               <span className="text-accent shrink-0">3.</span>
               <span>
-                <strong className="text-foreground">ร้านค้าเล็กๆ 3.2 ล้านร้าน ยังไม่ใช้เทคโนโลยี</strong> — ร้านค้า SME
-                ส่วนใหญ่ยังใช้ Excel หรือกระดาษทำบัญชี จัดการสต็อก ทำเงินเดือน — นี่คือโอกาสใหญ่
+                <strong className="text-foreground">ร้านค้าเล็กๆ 3.2 ล้านร้าน ยังไม่ใช้เทคโนโลยี</strong> — รัฐบาลให้ลดภาษี
+                200% สำหรับค่าใช้จ่ายดิจิทัลของ SME (มิ.ย. 2025 - ธ.ค. 2027) — SME มีแรงจูงใจซื้อซอฟต์แวร์
               </span>
             </div>
             <div className="flex gap-2">
               <span className="text-accent shrink-0">4.</span>
               <span>
-                <strong className="text-foreground">รัฐบาลสนับสนุนเต็มที่</strong> — BOI ให้ลดภาษีสูงสุด 13 ปี
-                สำหรับ startup และ depa ให้ทุนสนับสนุนด้านเทคโนโลยี
+                <strong className="text-foreground">Data Center บูมสุดๆ</strong> — ลงทุน $23.1B ในปี 2025
+                Google Cloud เปิดที่กรุงเทพ ม.ค. 2026, CP+BlackRock ทำ Giga data center $3-5B
               </span>
             </div>
           </div>
@@ -275,25 +274,26 @@ export default function Home() {
         <div className="card p-5">
           <div className="grid gap-2 md:grid-cols-2 text-sm text-muted">
             {[
-              "Google e-Conomy SEA Report 2024",
-              "Momentum Works — Food Delivery, E-Commerce Reports",
-              "Mordor Intelligence — Thailand CEP, Ride-hailing, Fintech Markets",
-              "Statista — Thailand Food Delivery, Digital Payments, SaaS",
-              "Grand View Research — Thailand Telehealth Market",
-              "Ken Research — Thailand HR Tech, PropTech, Fintech",
-              "IMARC Group — Thailand AgriTech, Online Travel Markets",
-              "Bangkok Post — Business & Tech sections 2024-2025",
-              "Nation Thailand — E-commerce, Logistics revenue reports",
-              "TechCrunch — LINE MAN Wongnai IPO coverage",
-              "GetLatka — PEAK revenue data 2024",
-              "FlowAccount — Company profile & user data",
-              "Trade.gov — Thailand Digital Economy overview",
-              "World Bank — Thailand Digital Future report",
-              "DealStreetAsia — Flash Express, LINE MAN funding",
-              "Thai Venture Capital Association (TVCA) — Funding data",
-              "Verified Market Research — Thailand Mobile Payments",
-              "6W Research — Thailand EdTech Market Outlook",
-              "Bloomberg — Agoda CEO interview, Thailand tourism data",
+              "Google e-Conomy SEA 2025 Report — Thailand $56B GMV",
+              "Sea Ltd Q4 & Full Year 2025 Earnings (มี.ค. 2026)",
+              "Grab Q3 2025 Results — Thailand highest growth",
+              "ธนาคารแห่งประเทศไทย — ใบอนุญาต Virtual Bank (19 มิ.ย. 2025)",
+              "DataReportal — Digital 2026 Thailand (67.8M users)",
+              "Mordor Intelligence — Thailand CEP, Mobile Payments, HR SaaS",
+              "DealStreetAsia — Food Delivery, Startup Funding 2025-2026",
+              "Nation Thailand — Foodpanda exit, Temu impact, Factory closures",
+              "Bangkok Post — KEX delisting, Lazada pivot, Virtual banks (2025-2026)",
+              "TechCrunch — LINE MAN IPO, Ascend Money unicorn",
+              "Tracxn — Thailand Startups, AgriTech, HealthTech data",
+              "Grand View Research — Thailand Telehealth Market 2030",
+              "IMARC Group — Thailand EdTech, AgriTech, E-Commerce Markets",
+              "GetLatka — PEAK revenue 2024",
+              "PropertyScout — Series A announcement (Altara Ventures)",
+              "PR Newswire — J&T Express 30B parcels record (2025)",
+              "BOI Thailand — New incentives package (ม.ค. 2026)",
+              "DEPA — SME digital grants & AI initiatives 2025-2026",
+              "Booking Holdings Q4 2025 Earnings — Agoda Asia growth",
+              "Caproasia — LINE MAN Wongnai IPO Hong Kong/NY (ก.พ. 2026)",
             ].map((src) => (
               <div key={src} className="flex gap-2">
                 <span className="text-accent shrink-0">&#9679;</span>

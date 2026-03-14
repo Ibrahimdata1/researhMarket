@@ -30,21 +30,25 @@ export interface SectorData {
 }
 
 export const digitalEconomyOverview = {
-  totalGMV2024: 49,            // billion USD
-  totalGMV2025: 56,            // billion USD projected
-  growthRate: 16,              // % YoY
-  gdpContribution: 23.9,      // % of GDP
-  gdpContributionTHB: 4440,   // billion THB
-  digitalPaymentGTV: 163,     // billion USD in 2025
+  totalGMV2024: 49,            // billion USD (actual)
+  totalGMV2025: 56,            // billion USD (Google e-Conomy SEA 2025)
+  growthRate: 16,              // % YoY (2024→2025)
+  gdpContribution: 6,         // % of GDP (digital economy, 2nd largest in ASEAN)
+  gdpContributionTHB: 4690,   // billion THB (digital GDP 2025, +6.2% YoY)
+  digitalPaymentGTV: 34.08,   // billion USD mobile payments 2026
   startupEcosystemValue: 4.9, // billion USD
   totalStartups: 2100,
-  unicorns: 5,
-  seedFunding2024: 500,        // million USD total startup funding
-  globalRanking: 54,
+  unicorns: 5,                 // Flash Express, LINE MAN, Ascend Money, Bitkub, OPN
+  vcMarket2025: 552,           // million USD VC market 2025
+  globalRanking: 53,           // up from 54 (+12.7% growth)
   seaRanking: 4,
-  internetUsers: 61.21,        // million
-  internetPenetration: 85.3,   // %
-  source: "Google e-Conomy SEA 2024, Trade.gov, TVCA"
+  internetUsers: 67.8,         // million (Oct 2025, DataReportal)
+  internetPenetration: 94.7,   // % (Oct 2025)
+  fiveGCoverage: 95,           // %
+  dataCenterInvestment: 23.1,  // billion USD approved 2025
+  gdpGrowth2025: 2.4,          // % actual
+  gdpForecast2026: "1.5-2.5",  // % NESDC
+  source: "Google e-Conomy SEA 2025, DataReportal Digital 2026, NESDC, StartupBlink"
 };
 
 export const sectors: SectorData[] = [
@@ -53,15 +57,15 @@ export const sectors: SectorData[] = [
     name: "ฟู้ดเดลิเวอรี่",
     nameEn: "Food Delivery",
     icon: "🍜",
-    marketSizeTHB: "143",
-    marketSizeUSD: "4.2",
-    growthRate: "12",
+    marketSizeTHB: "178",
+    marketSizeUSD: "5.24",
+    growthRate: "8",
     dominantPlayers: [
       {
         name: "Grab",
         marketShare: 46,
-        revenue: "ไม่เปิดเผย (Grab Thailand)",
-        valuation: "$40B (ทั้งกลุ่ม, SET-listed)",
+        revenue: "กลุ่มทั้งหมด 2025: $3.38-3.40B, ไทยโต 22% สูงสุดในภูมิภาค",
+        valuation: "$14B (Nasdaq: GRAB)",
         strengths: [
           "แอปทำได้ทุกอย่าง (เรียกรถ + สั่งอาหาร + จ่ายเงิน)",
           "เข้าตลาดก่อนคนอื่นตั้งแต่ปี 2013",
@@ -78,17 +82,17 @@ export const sectors: SectorData[] = [
       {
         name: "LINE MAN Wongnai",
         marketShare: 40,
-        revenue: "~$451M (15.3B THB) ปี 2024",
-        valuation: "$1B+ (Unicorn, กำลัง IPO)",
+        revenue: "~$750M ต่อปี (เม.ย. 2025), มีกำไรครั้งแรกปี 2025",
+        valuation: "$1B+ (Unicorn, กำลังจะ IPO ที่ฮ่องกงหรือนิวยอร์ก)",
         strengths: [
           "ฐานข้อมูลร้านอาหารจาก Wongnai 400K+ ร้าน",
-          "ผูกกับ LINE app ที่คนไทยใช้ทุกวัน",
-          "ส่วนแบ่งตลาดโตจาก 36% เป็น 40% ใน 1 ปี",
-          "เพิ่งมีกำไรครั้งแรกปี 2025",
+          "ผูกกับ LINE app ที่คนไทยใช้ทุกวัน, 10 ล้าน MAU",
+          "เพิ่งมีกำไรครั้งแรกปี 2025 หลังขาดทุนมาหลายปี",
+          "ซื้อกิจการ Rabbit LINE Pay + FoodStory POS",
         ],
         weaknesses: [
           "พึ่งพาแอป LINE มากเกินไป ถ้า LINE หายไปก็ลำบาก",
-          "ยังไม่มีระบบจ่ายเงินของตัวเอง",
+          "IPO ถูกเลื่อนจากตลาดไทย ไปหาตลาดต่างประเทศแทน",
           "คนส่งอาหารน้อยกว่า Grab โดยเฉพาะนอกเมืองใหญ่",
           "รีวิวร้านอาหารเก่า ไม่อัพเดตทันเวลา",
         ],
@@ -112,10 +116,10 @@ export const sectors: SectorData[] = [
     opportunityScore: 6,
     entryDifficulty: 9,
     description:
-      "ตลาดสั่งอาหารออนไลน์ไทยมีมูลค่ากว่า 143,000 ล้านบาท — แต่ตอนนี้มีแค่ 2 เจ้าใหญ่ คือ Grab กับ LINE MAN ที่แบ่งกัน 86% ของตลาด หลังจาก foodpanda ถอนตัวออกไปแล้ว",
+      "ตลาดสั่งอาหารออนไลน์ไทยปี 2025 มีมูลค่ากว่า 178,000 ล้านบาท ($5.24B) — Grab กับ LINE MAN ครอง ~90% ของตลาด หลัง foodpanda ปิดตัว 23 พ.ค. 2025 (ขาดทุนสะสม 13,800 ล้านบาท) Robinhood รับช่วงต่อลูกค้า/ไรเดอร์",
     keyInsight:
       "ร้านอาหารต้องจ่ายค่าคอมมิชชั่นให้แอปสั่งอาหาร 30-35% ของยอดขาย ซึ่งสูงมาก — โอกาสคือ: ทำซอฟต์แวร์ช่วยร้านอาหารจัดการออร์เดอร์จากทุกแอปในที่เดียว แล้วค่อยๆ สร้างช่องทางขายตรงให้ร้าน",
-    source: "Momentum Works 2024, Statista, Bangkok Post",
+    source: "Momentum Works 2025, Statista, DealStreetAsia, Nation Thailand (พ.ค. 2025)",
   },
   {
     id: "ecommerce",
@@ -129,50 +133,50 @@ export const sectors: SectorData[] = [
       {
         name: "Shopee",
         marketShare: 50,
-        revenue: "49.96B THB (2024)",
-        valuation: "ส่วนหนึ่งของ Sea Ltd ($25B)",
+        revenue: "ไทย 2024: 49.96B THB (กำไร 4.63B) | Sea Ltd ปี 2025: $23B (+36% YoY)",
+        valuation: "Sea Ltd ~$50B (NYSE: SE, มี.ค. 2026)",
         strengths: [
-          "แอปอันดับ 1 ในไทยด้าน e-commerce",
-          "Free shipping + voucher ดึงลูกค้า",
-          "ShopeePay ผูก ecosystem",
+          "แอปอันดับ 1 ในไทย ด้านซื้อของออนไลน์",
+          "Sea Ltd ปี 2025 กำไร $1.6B (+260%) แข็งแกร่งมาก",
+          "Instant delivery 1 ชม. ในกรุงเทพ เริ่มแล้ว",
           "Live commerce แข็งแกร่ง",
         ],
         weaknesses: [
-          "กำไรน้อย (4.63B จาก 50B revenue = ~9%)",
-          "พึ่งพาส่วนลดหนัก ลูกค้าไม่ loyal",
+          "ถูก TikTok Shop แย่งส่วนแบ่งตลาดอย่างรวดเร็ว",
+          "ถูก Temu กดราคาจนร้านไทยแข่งไม่ได้",
           "สินค้าจีนราคาถูกท่วม คุณภาพต่ำ",
-          "Seller support ไม่ดี ระบบปรับนโยบายบ่อย",
+          "ปลด ShopeeFood/ShopeePay พนักงาน 300 คน (มิ.ย. 2025)",
         ],
       },
       {
         name: "Lazada",
         marketShare: 30,
-        revenue: "30.16B THB (2025)",
+        revenue: "30.16B THB (2024, กำไร 1.46B) | EBITDA บวกครั้งแรกรอบ 12 ปี (ก.ค. 2024)",
         valuation: "ส่วนหนึ่งของ Alibaba Group",
         strengths: [
-          "Backend logistics LazFlash แข็งแกร่ง",
-          "Alibaba technology + AI recommendation",
-          "LazMall สำหรับ brand ใหญ่",
+          "LazMall 170,000 ร้าน brand แท้ — pivot เป็น 'ตลาดสินค้าคุณภาพ'",
+          "เพิ่งมีกำไรครั้งแรกในรอบ 12 ปี (ก.ค. 2024)",
+          "LazMall ยอดขายโต 51% — คนเริ่มหนีสินค้าจีนราคาถูกมาซื้อของดี",
         ],
         weaknesses: [
-          "Market share หดลงเรื่อยๆ",
-          "UX ไม่ดีเท่า Shopee",
-          "ผู้บริหารเปลี่ยนบ่อย ขาดทิศทาง",
+          "ส่วนแบ่งตลาดลดจาก 30% เหลือ ~22% ถูก TikTok Shop แซง",
+          "ยังตามหลัง Shopee ห่างมาก",
+          "ต้องแข่งกับ Temu ที่ขายถูกกว่าอีก",
         ],
       },
       {
         name: "TikTok Shop",
-        marketShare: 15,
-        revenue: "ไม่เปิดเผย",
+        marketShare: 21,
+        revenue: "ไทย 2024: 12B THB (ขาดทุน 3.6B) | Q1 2025 GMV: $2.8B (โต 3 เท่า!)",
         valuation: "ส่วนหนึ่งของ ByteDance ($300B)",
         strengths: [
-          "Social commerce + content ดึง Gen Z",
-          "Affiliate marketing แข็งแกร่ง",
-          "Live selling ยอดพุ่งมาก",
+          "GMV โตขึ้น 3 เท่าใน Q1 2025 — เร็วที่สุดในไทย",
+          "ผู้ขาย 3 ล้านร้านค้า, video sellers โต 175%",
+          "Live selling ยอดพุ่งมาก — เปลี่ยนวิธีซื้อของคนไทย",
         ],
         weaknesses: [
-          "ยังไม่มี logistics ของตัวเอง",
-          "ความเสี่ยงด้าน regulation",
+          "ขาดทุน 3,600 ล้านบาทในปี 2024 แม้ยอดขายจะสูง",
+          "ถูก ETDA จัดเป็น 'แพลตฟอร์มที่มีผลกระทบสูง' ต้องปฏิบัติตามกฎเข้มขึ้น",
           "สินค้าเกรดต่ำ ขาดความน่าเชื่อถือ",
         ],
       },
@@ -181,51 +185,51 @@ export const sectors: SectorData[] = [
     opportunityScore: 5,
     entryDifficulty: 10,
     description:
-      "ตลาดซื้อของออนไลน์ไทยมีมูลค่า 1.1 ล้านล้านบาท โตขึ้น 14% จากปีก่อน — Shopee ครองตลาดครึ่งหนึ่ง ตามด้วย Lazada 30% และ TikTok Shop ที่กำลังมาแรงมาก",
+      "ตลาดซื้อของออนไลน์ไทยปี 2025 มีมูลค่า $33B (43.5 ล้านผู้ใช้) — Shopee 49%, TikTok Shop โตขึ้น 3 เท่าแซง Lazada ขึ้นที่ 2, Temu บุกไทยทำโรงงาน 2,000 แห่งปิดตัว",
     keyInsight:
-      "ไม่ควรไปแข่งกับ Shopee/Lazada โดยตรง แต่โอกาสอยู่ที่: ทำเครื่องมือช่วยคนขายของออนไลน์ เช่น ระบบจัดการสต็อก, เครื่องมือโพสต์ขายหลายแอปพร้อมกัน, ระบบวิเคราะห์ยอดขาย",
-    source: "Nation Thailand, Momentum Works, eCommerceDB",
+      "ไม่ควรแข่งกับแพลตฟอร์มใหญ่ แต่โอกาสคือ: ทำเครื่องมือช่วยร้านค้า 3 ล้านร้านที่ขายบน TikTok/Shopee/Lazada พร้อมกัน — จัดการสต็อก, โพสต์ขายหลายแอป, วิเคราะห์ยอดขาย, ตัดวิดีโอขายของ",
+    source: "Sea Ltd Q4 2025 Earnings, Nation Thailand, Bangkok Post (มี.ค. 2026)",
   },
   {
     id: "fintech",
     name: "ฟินเทค & Digital Payment",
     nameEn: "FinTech & Payments",
     icon: "💳",
-    marketSizeTHB: "1,080",
-    marketSizeUSD: "31.8",
-    growthRate: "18.1",
+    marketSizeTHB: "1,160",
+    marketSizeUSD: "34.08",
+    growthRate: "14.7",
     dominantPlayers: [
       {
         name: "PromptPay (ธปท.)",
         marketShare: 41,
-        revenue: "Infrastructure — ไม่มี revenue ตรง",
-        valuation: "Government infrastructure",
+        revenue: "โครงสร้างพื้นฐานของรัฐ — ไม่เก็บเงินโดยตรง",
+        valuation: "โครงสร้างพื้นฐานรัฐบาล (ธนาคารแห่งประเทศไทย)",
         strengths: [
-          "90M+ registrations ครอบคลุมเกือบทุกคนไทย",
-          "74M transactions/day",
-          "ฟรี ไม่มีค่าธรรมเนียม",
-          "ผูกกับทุก mobile banking app",
+          "90 ล้านบัญชี (มากกว่าประชากร 72 ล้านคน!)",
+          "74 ล้านธุรกรรมต่อวัน (มิ.ย. 2025)",
+          "ก.ย. 2025: 2,160 ล้านธุรกรรม มูลค่า 4.2 ล้านล้านบาท",
+          "โอนข้ามประเทศ QR โต 119% ต้นปี 2025",
         ],
         weaknesses: [
-          "ไม่มี loyalty/reward system",
-          "ไม่รองรับ cross-border ดี",
-          "ไม่มี merchant analytics",
-          "ขาด API สำหรับ SME integration",
+          "ไม่มีระบบสะสมแต้ม/รางวัล",
+          "ไม่มีเครื่องมือวิเคราะห์ข้อมูลให้ร้านค้า",
+          "ยังขาดระบบเชื่อมต่อกับซอฟต์แวร์ร้านค้าเล็กๆ",
+          "MRT กรุงเทพจะเป็น cashless เต็มรูปแบบ มิ.ย. 2026",
         ],
       },
       {
         name: "TrueMoney Wallet",
         marketShare: 52.6,
-        revenue: "ไม่เปิดเผย (Ascend Money - Unicorn)",
-        valuation: "$1B+ (Ascend Money, backed by CP Group + Ant Group)",
+        revenue: "Ascend Money ~$750M/ปี (ก.ย. 2025) | 32 ล้านผู้ใช้",
+        valuation: "$1.5B (Unicorn ตัวแรกของ fintech ไทย, 2021)",
         strengths: [
-          "52.6% ส่วนแบ่งตลาด e-wallet",
-          "7-Eleven 14,000+ สาขาเป็นจุดเติมเงิน",
-          "Cross-border payments ใน ASEAN",
+          "52.6% ส่วนแบ่งตลาดกระเป๋าเงินดิจิทัล, 32 ล้านผู้ใช้",
+          "ได้ใบอนุญาตธนาคารดิจิทัล (Virtual Bank) มิ.ย. 2025!",
+          "7-Eleven 14,000+ สาขาเป็นจุดเติมเงิน, ขยาย 7 ประเทศ",
         ],
         weaknesses: [
           "ผูกกับ True/CP ecosystem มาก",
-          "ไม่ popular กับคนรุ่นใหม่เท่า banking apps",
+          "ต้องแข่งกับอีก 2 ธนาคารดิจิทัลที่จะเปิดตัวกลางปี 2026",
           "UI/UX ยุ่งเหยิง features เยอะเกิน",
         ],
       },
@@ -250,10 +254,10 @@ export const sectors: SectorData[] = [
     opportunityScore: 7,
     entryDifficulty: 8,
     description:
-      "คนไทย 92% จ่ายเงินออนไลน์แล้ว พร้อมเพย์มีคนลงทะเบียน 90+ ล้านบัญชี มีการโอนเงิน 74 ล้านครั้งต่อวัน TrueMoney ครองตลาดกระเป๋าเงินดิจิทัลกว่าครึ่ง",
+      "ตลาด mobile payments ไทยปี 2026 มูลค่า $34B — คนไทย 89% ใช้กระเป๋าเงินดิจิทัล (สูงที่สุดในโลก) พร้อมเพย์ 90 ล้านบัญชี 74 ล้านธุรกรรม/วัน — เรื่องใหญ่: 3 ธนาคารดิจิทัลจะเปิดตัวกลางปี 2026 (CP Group, กรุงไทย+AIS, SCBX+KakaoBank+WeBank)",
     keyInsight:
-      "ตลาดจ่ายเงินออนไลน์เต็มแล้ว แต่ร้านค้าเล็กๆ 3.2 ล้านร้านยังขาดเครื่องมือจัดการเงิน เช่น ระบบออกใบแจ้งหนี้, ดูกระแสเงินสด, บันทึกรายจ่าย — ส่วนใหญ่ยังใช้ Excel",
-    source: "Mordor Intelligence, Verified Market Research, Nation Thailand",
+      "ธนาคารดิจิทัล 3 แห่งเปิดตัวกลางปี 2026 จะเขย่าวงการ — แต่ร้านค้าเล็กๆ 3.2 ล้านร้านยังขาดเครื่องมือจัดการเงิน (ออกบิล, ดูกระแสเงินสด, บันทึกรายจ่าย) ยังใช้ Excel อยู่",
+    source: "ธปท. ประกาศ 19 มิ.ย. 2025, Mordor Intelligence, Nation Thailand (มี.ค. 2026)",
   },
   {
     id: "logistics",
@@ -267,51 +271,51 @@ export const sectors: SectorData[] = [
       {
         name: "Flash Express",
         marketShare: 28,
-        revenue: "24.7B THB (2024, +23% YoY)",
-        valuation: "$2B (Thailand's 1st Unicorn)",
+        revenue: "24.7B THB (2024, +23%) กำไร 940M (จากขาดทุน 559M ปีก่อน)",
+        valuation: "$2.1B (Unicorn ตัวแรกของไทย, ระดมทุนรวม $997M)",
         strengths: [
-          "เครือข่ายกว้างครอบคลุมทั่วประเทศ",
-          "ราคาถูกที่สุดในตลาด",
-          "เพิ่งมีกำไร 940M THB ปี 2024",
-          "Tech-driven operations",
+          "กลับมามีกำไรแล้ว (+268% จากปีก่อน)",
+          "เครือข่ายกว้างครอบคลุมทั่วประเทศ ราคาถูกสุด",
+          "ใช้เทคโนโลยีจัดการ ลดต้นทุน",
+          "กำลังเตรียม IPO",
         ],
         weaknesses: [
+          "ปิด 67 สาขา + ถอนตัวจากมาเลเซียทั้งหมด (ม.ค.) เพื่อลดต้นทุน",
+          "ขาดทุนสะสม 5,300 ล้านบาทจากปี 2018-2023",
           "คุณภาพบริการไม่สม่ำเสมอ พัสดุเสียหายบ่อย",
-          "Customer service แย่ ติดต่อยาก",
-          "ระบบ tracking ไม่ real-time จริง",
-          "พึ่งพา e-commerce platform มากเกิน",
+          "บริการลูกค้าแย่ ติดต่อยาก",
         ],
       },
       {
         name: "J&T Express",
         marketShare: 25,
-        revenue: "25.4B THB (2024, +37% YoY)",
-        valuation: "ส่วนหนึ่งของ J&T Global (HKEx listed)",
+        revenue: "ไทย 2024: 25.4B THB (+37%) | กลุ่ม 2025: 30.13B พัสดุ (+22.2%)",
+        valuation: "ส่วนหนึ่งของ J&T Global (HKEx listed, revenue $10.9B)",
         strengths: [
-          "Revenue สูงสุดในตลาด",
-          "กำไร 819M THB (+111% YoY)",
-          "เครือข่าย drop-off กว้าง",
+          "รายได้สูงสุดในตลาดไทย (เหนือ Flash Express)",
+          "SEA โต 67.8% — บูมตาม TikTok Shop",
+          "กำลังใส่ระบบคัดแยกอัตโนมัติระดับโรงงานทั่วไทย (แห่งแรกใน SEA)",
         ],
         weaknesses: [
-          "Brand perception ยังตามหลัง Flash",
+          "ยังตามหลัง Flash Express ในด้าน brand",
           "ค่าส่งเฉลี่ยสูงกว่า Flash",
-          "Innovation ช้า ตาม trend",
+          "พึ่งพา TikTok Shop มากเกิน ถ้า TikTok โดน ban จะกระทบ",
         ],
       },
       {
         name: "Kerry Express (KEX)",
         marketShare: 15,
-        revenue: "ขาดทุนสะสม 12.9B THB (2022-2024)",
-        valuation: "SET: KEX (market cap ลดลงมาก)",
+        revenue: "ขาดทุนสะสม 12.9B THB | ถูก SF Holding (จีน) ซื้อ 81.43% แล้วถอนออกจากตลาดหุ้น",
+        valuation: "ถอนออกจากตลาดหุ้น SET (มิ.ย. 2025) ราคา tender 1.50 บาท/หุ้น",
         strengths: [
-          "Brand เก่าแก่ น่าเชื่อถือ",
-          "จุด drop-off ตาม 7-Eleven",
+          "ยังมี Brand เก่าแก่ น่าเชื่อถือ",
+          "มี SF Holding (บริษัทขนส่งยักษ์ใหญ่จีน) หนุนหลัง",
         ],
         weaknesses: [
-          "ขาดทุนหนักต่อเนื่อง 3 ปี",
-          "ไม่สามารถแข่งราคาได้",
-          "Technology outdated",
-          "กำลัง restructure",
+          "ถูกถอนออกจากตลาดหุ้น — สัญญาณว่ากิจการไม่ดี",
+          "ขาดทุนหนักต่อเนื่อง 3 ปี แข่งราคาไม่ได้",
+          "เทคโนโลยีเก่า ตามคู่แข่งไม่ทัน",
+          "ตกจากที่ 1 เหลืออันดับ 4",
         ],
       },
     ],
@@ -336,8 +340,8 @@ export const sectors: SectorData[] = [
       {
         name: "DDproperty (PropertyGuru)",
         marketShare: 40,
-        revenue: "ส่วนหนึ่งของ PropertyGuru Group (NYSE listed)",
-        valuation: "PropertyGuru ~$1.3B (ทั้งกลุ่ม)",
+        revenue: "PropertyGuru Q2 2024: S$41M (+10%) | ถูก EQT ซื้อไป $1.1B แล้วถอนจาก NYSE",
+        valuation: "ถูก EQT ซื้อกิจการ ~$1.1B (ต้นปี 2025, ถอนจากตลาดหุ้นแล้ว)",
         strengths: [
           "Brand อันดับ 1 ในไทย",
           "Data + analytics ดีที่สุด",
@@ -351,19 +355,19 @@ export const sectors: SectorData[] = [
         ],
       },
       {
-        name: "Hipflat",
-        marketShare: 15,
+        name: "PropertyScout",
+        marketShare: 10,
         revenue: "ไม่เปิดเผย",
-        valuation: "Startup stage",
+        valuation: "ระดมทุนรวม $10.6M (Series A $5M จาก Altara Ventures)",
         strengths: [
-          "Data-driven valuation tools",
-          "UX ดี modern",
-          "ข้อมูลราคาตลาดละเอียด",
+          "แพลตฟอร์มซื้อขาย/เช่าครบวงจร — ฐานข้อมูลใหญ่และแม่นยำที่สุดในไทย",
+          "UX ดี ทันสมัย กำลังขยายไป SEA",
+          "มีแผนซื้อกิจการเพิ่ม",
         ],
         weaknesses: [
-          "ฐานผู้ใช้เล็กกว่า DDproperty มาก",
-          "ไม่มี agent network",
-          "Revenue model ยังไม่ชัด",
+          "ยังเล็กกว่า DDproperty มาก",
+          "ยังต้องระดมทุนเพิ่ม",
+          "ยังไม่พิสูจน์ว่าจะมีกำไร",
         ],
       },
     ],
@@ -381,25 +385,25 @@ export const sectors: SectorData[] = [
     name: "เฮลท์เทค & Telemedicine",
     nameEn: "HealthTech & Telemedicine",
     icon: "🏥",
-    marketSizeTHB: "54.4",
-    marketSizeUSD: "1.6",
+    marketSizeTHB: "50",
+    marketSizeUSD: "1.47",
     growthRate: "29.1",
     dominantPlayers: [
       {
         name: "MorDee (True Digital)",
         marketShare: 25,
-        revenue: "ไม่เปิดเผย",
-        valuation: "ส่วนหนึ่งของ True Corp ($15B+)",
+        revenue: "ไม่เปิดเผย | ผู้ใช้ 400,000+ (โต 100% จาก 200K ปี 2023)",
+        valuation: "ส่วนหนึ่งของ True Corp/CP Group ($15B+)",
         strengths: [
-          "First-mover ใน telemedicine ไทย",
-          "ผูกกับ True ecosystem + hospitals",
-          "ได้ทั้ง B2C และ B2B",
+          "แอปพบหมอออนไลน์ตัวแรกของไทย — 500+ หมอ 20+ สาขา",
+          "ผูกกับ True + CP Group ecosystem",
+          "ร่วมมือกับ สปสช. ให้คนมีบัตรทองใช้ฟรีใน 5 จังหวัด",
         ],
         weaknesses: [
-          "Adoption rate ยังต่ำมาก",
+          "ผู้ใช้ยังน้อย (400K) เทียบกับคนไทย 72 ล้านคน",
           "หมอในระบบไม่เพียงพอ",
-          "ไม่ integrate กับ HIS ของ รพ.",
-          "UX ยุ่งยาก คนแก่ใช้ไม่เป็น",
+          "ไม่เชื่อมกับระบบของโรงพยาบาลได้ดี",
+          "ใช้ยาก โดยเฉพาะคนสูงอายุ",
         ],
       },
       {
@@ -423,9 +427,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 9,
     entryDifficulty: 7,
     description:
-      "ตลาดพบหมอออนไลน์ในไทยมีมูลค่า 54,400 ล้านบาท โตเร็วที่สุดในทุกวงการ (29% ต่อปี) — แต่คนไทยส่วนใหญ่ยังไม่ค่อยใช้ เพราะยังไม่มีแอปที่ใช้ง่ายจริงๆ",
+      "ตลาดสุขภาพดิจิทัลไทยปี 2025 มูลค่า 50,000 ล้านบาท (คาดว่าจะโตเป็น 61,700 ล้านบาทภายในปี 2029) โตเร็วที่สุด 29%/ปี — มี 329 startup ด้านสุขภาพ แต่ส่วนใหญ่ยังเล็กมาก",
     keyInsight:
-      "คลินิกเล็กๆ กว่า 20,000 แห่งทั่วไทยยังใช้กระดาษจดข้อมูลคนไข้ — โอกาสคือ: ทำซอฟต์แวร์ราคาถูกให้คลินิกจัดการนัดหมาย, บันทึกประวัติคนไข้, ปรึกษาหมอทางวิดีโอ, สั่งยาส่งบ้าน ครบในแอปเดียว",
+      "คลินิกเล็กๆ 20,000+ แห่งยังใช้กระดาษ — แต่โรงพยาบาลใหญ่เริ่มใช้ AI ช่วยวินิจฉัยโรค (แม่นยำ 90%+, เร็วขึ้น 30-50%) — โอกาส: ทำซอฟต์แวร์คลินิกราคาถูก + เชื่อม AI วินิจฉัย",
     source: "Grand View Research, Research and Markets, True Blog",
   },
   {
@@ -484,8 +488,8 @@ export const sectors: SectorData[] = [
     name: "เอชอาร์เทค",
     nameEn: "HR Tech & Recruitment",
     icon: "👥",
-    marketSizeTHB: "8.84",
-    marketSizeUSD: "0.26",
+    marketSizeTHB: "10.02",
+    marketSizeUSD: "0.294",
     growthRate: "12",
     dominantPlayers: [
       {
@@ -526,7 +530,7 @@ export const sectors: SectorData[] = [
     opportunityScore: 8,
     entryDifficulty: 5,
     description:
-      "ตลาดเทคโนโลยีด้านบุคคล (หาคน จัดการพนักงาน) มีมูลค่า 8,840 ล้านบาท กำลังโต — แต่ที่มีอยู่ตอนนี้เป็นแค่เว็บหางาน ยังไม่มีระบบจัดการพนักงานครบวงจรสำหรับบริษัทเล็ก",
+      "ตลาดเทคโนโลยีด้านบุคคลปี 2025 มีมูลค่า 10,020 ล้านบาท ($294M) คาดว่าจะโตเป็น $539M ภายในปี 2030 — อัตราว่างงานไทยแค่ 1% (ต่ำมาก) ทำให้บริษัทแย่งตัวคนกันหนัก แต่เครื่องมือหาคน/จัดการพนักงานยังเป็นแค่เว็บลงประกาศงาน",
     keyInsight:
       "บริษัทเล็กๆ 3.2 ล้านรายในไทย ส่วนใหญ่ยังใช้ Excel จัดการเงินเดือน ลาหยุด สัญญาจ้าง ประกันสังคม — โอกาสคือทำระบบ HR ออนไลน์ราคาถูกที่ทำทุกอย่างนี้ครบในที่เดียว",
     source: "Ken Research, Bangkok Post, Manatal",
@@ -678,14 +682,14 @@ export const sectors: SectorData[] = [
 // Market size comparison chart data
 export const marketSizeChartData = [
   { name: "E-Commerce", size: 33000, color: "#C87941" },
-  { name: "FinTech/Payments", size: 31800, color: "#E8B878" },
-  { name: "Food Delivery", size: 4200, color: "#fb923c" },
+  { name: "FinTech/Payments", size: 34080, color: "#E8B878" },
+  { name: "Food Delivery", size: 5240, color: "#fb923c" },
   { name: "Logistics", size: 3400, color: "#60a5fa" },
-  { name: "HealthTech", size: 1600, color: "#4ade80" },
+  { name: "HealthTech", size: 1470, color: "#4ade80" },
   { name: "PropTech", size: 1200, color: "#a78bfa" },
   { name: "EdTech", size: 1760, color: "#f472b6" },
   { name: "SaaS/SME", size: 440, color: "#22d3ee" },
-  { name: "HR Tech", size: 260, color: "#94a3b8" },
+  { name: "HR Tech", size: 294, color: "#94a3b8" },
   { name: "Travel Tech", size: 3560, color: "#fb923c" },
   { name: "AgriTech", size: 80, color: "#4ade80" },
 ];
