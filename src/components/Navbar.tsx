@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#overview", label: "ภาพรวมตลาด" },
-  { href: "#sectors", label: "วิเคราะห์รายอุตสาหกรรม" },
-  { href: "#competitors", label: "คู่แข่ง & ส่วนแบ่ง" },
-  { href: "#opportunities", label: "โอกาสเจาะตลาด" },
-  { href: "#strategy", label: "กลยุทธ์ RunawayTech" },
+  { href: "#overview", label: "ภาพรวม" },
+  { href: "#sectors", label: "แต่ละวงการ" },
+  { href: "#competitors", label: "ตารางคู่แข่ง" },
+  { href: "#strategy", label: "แผนธุรกิจ" },
+  { href: "#sources", label: "แหล่งข้อมูล" },
 ];
 
 export default function Navbar() {

@@ -104,7 +104,7 @@ function PlayerCard({ player, index }: { player: SectorData["dominantPlayers"][0
 
           <div>
             <div className="flex items-center gap-1 text-green text-xs font-semibold mb-1">
-              <Shield size={12} /> จุดแข็ง
+              <Shield size={12} /> จุดแข็ง (ทำไมถึงครองตลาดได้)
             </div>
             <ul className="space-y-0.5">
               {player.strengths.map((s) => (
@@ -117,7 +117,7 @@ function PlayerCard({ player, index }: { player: SectorData["dominantPlayers"][0
 
           <div>
             <div className="flex items-center gap-1 text-red text-xs font-semibold mb-1">
-              <AlertTriangle size={12} /> จุดอ่อน (โอกาสเราเจาะ)
+              <AlertTriangle size={12} /> จุดอ่อน (ช่องโหว่ที่เราเข้าไปแย่งได้)
             </div>
             <ul className="space-y-0.5">
               {player.weaknesses.map((w) => (
@@ -177,7 +177,7 @@ function SectorCard({ sector }: { sector: SectorData }) {
       {/* Key Insight always visible */}
       <div className="mt-3 p-3 rounded-lg bg-accent/5 border border-accent/20">
         <div className="flex items-center gap-1.5 text-accent text-xs font-semibold mb-1">
-          <Zap size={12} /> Key Insight สำหรับ RunawayTech
+          <Zap size={12} /> โอกาสที่ RunawayTech เข้าไปทำได้
         </div>
         <p className="text-sm text-foreground">{sector.keyInsight}</p>
       </div>

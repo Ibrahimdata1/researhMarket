@@ -28,10 +28,10 @@ export function MarketSizeChart() {
   return (
     <div className="card p-4 md:p-6">
       <h3 className="text-lg font-semibold mb-1">
-        ขนาดตลาด Tech แต่ละอุตสาหกรรม (ล้าน USD)
+        แต่ละวงการมีเงินหมุนเวียนเท่าไร?
       </h3>
       <p className="text-muted text-sm mb-4">
-        เปรียบเทียบมูลค่าตลาดของแต่ละ sector ในปี 2024
+        เปรียบเทียบมูลค่าตลาดแต่ละวงการ — แท่งยิ่งยาว = ตลาดยิ่งใหญ่ (ล้านดอลลาร์)
       </p>
       <ResponsiveContainer width="100%" height={420}>
         <BarChart
@@ -77,10 +77,10 @@ export function GrowthRateChart() {
   return (
     <div className="card p-4 md:p-6">
       <h3 className="text-lg font-semibold mb-1">
-        อัตราการเติบโต CAGR (%) แต่ละ Sector
+        วงการไหนโตเร็วที่สุด? (% ต่อปี)
       </h3>
       <p className="text-muted text-sm mb-4">
-        Sector ที่โตเร็วกว่า 15% (เส้นประ) = โอกาสสูง
+        แท่งสีเขียว = วงการที่โตเร็วกว่า 15% ต่อปี (เส้นประ) ยิ่งโตเร็ว = ยิ่งน่าเข้าไปทำธุรกิจ
       </p>
       <ResponsiveContainer width="100%" height={420}>
         <BarChart data={growthRateChartData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
@@ -179,10 +179,10 @@ export function OpportunityMatrixChart() {
   return (
     <div className="card p-4 md:p-6">
       <h3 className="text-lg font-semibold mb-1">
-        Opportunity Matrix: โอกาส vs ความยาก
+        วงการไหนน่าเข้าที่สุด? (โอกาสสูง + เข้าง่าย)
       </h3>
       <p className="text-muted text-sm mb-4">
-        มุมบนซ้าย = โอกาสสูง เข้าง่าย (Sweet spot สำหรับ startup)
+        วงกลมยิ่งอยู่ด้านบนซ้าย = ยิ่งดี (โอกาสเยอะ เข้าตลาดไม่ยาก) ขนาดวงกลม = ขนาดตลาด
       </p>
       <ResponsiveContainer width="100%" height={450}>
         <ScatterChart margin={{ top: 20, right: 30, bottom: 40, left: 20 }}>

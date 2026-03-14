@@ -63,16 +63,16 @@ export const sectors: SectorData[] = [
         revenue: "ไม่เปิดเผย (Grab Thailand)",
         valuation: "$40B (ทั้งกลุ่ม, SET-listed)",
         strengths: [
-          "Super App (ride-hailing + food + payments)",
-          "First-mover advantage ตั้งแต่ 2013",
-          "GrabPay ecosystem ผูกผู้ใช้",
+          "แอปทำได้ทุกอย่าง (เรียกรถ + สั่งอาหาร + จ่ายเงิน)",
+          "เข้าตลาดก่อนคนอื่นตั้งแต่ปี 2013",
+          "มีระบบจ่ายเงิน GrabPay ที่ผูกผู้ใช้ไว้กับแอป",
           "เครือข่าย rider มากที่สุดในไทย",
         ],
         weaknesses: [
           "ค่า GP สูง 30-35% ร้านอาหารบ่นมาก",
-          "Customer service ช้า AI chatbot ไม่ตอบโจทย์",
-          "UI/UX ซับซ้อน feature เยอะเกิน",
-          "ไม่ focus เฉพาะ food — ถูก dilute ด้วย services อื่น",
+          "บริการลูกค้าช้า แชทบอทตอบไม่ตรงประเด็น",
+          "แอปซับซ้อน ฟีเจอร์เยอะเกินจนหาอะไรไม่เจอ",
+          "ไม่ได้โฟกัสแค่อาหาร ทำหลายอย่างเลยไม่เก่งสักอย่าง",
         ],
       },
       {
@@ -83,14 +83,14 @@ export const sectors: SectorData[] = [
         strengths: [
           "ฐานข้อมูลร้านอาหารจาก Wongnai 400K+ ร้าน",
           "ผูกกับ LINE app ที่คนไทยใช้ทุกวัน",
-          "Market share โตจาก 36% เป็น 40% ใน 1 ปี",
+          "ส่วนแบ่งตลาดโตจาก 36% เป็น 40% ใน 1 ปี",
           "เพิ่งมีกำไรครั้งแรกปี 2025",
         ],
         weaknesses: [
-          "พึ่งพา LINE ecosystem มากเกินไป",
-          "ยังไม่มี payment wallet ของตัวเอง",
-          "Rider network เล็กกว่า Grab ในต่างจังหวัด",
-          "ข้อมูล review เก่า ไม่ update ทันเวลา",
+          "พึ่งพาแอป LINE มากเกินไป ถ้า LINE หายไปก็ลำบาก",
+          "ยังไม่มีระบบจ่ายเงินของตัวเอง",
+          "คนส่งอาหารน้อยกว่า Grab โดยเฉพาะนอกเมืองใหญ่",
+          "รีวิวร้านอาหารเก่า ไม่อัพเดตทันเวลา",
         ],
       },
       {
@@ -99,12 +99,12 @@ export const sectors: SectorData[] = [
         revenue: "ไม่เปิดเผยแยก",
         valuation: "ส่วนหนึ่งของ Sea Ltd ($25B)",
         strengths: [
-          "Leverage ฐานลูกค้า Shopee 40M+ คน",
+          "ดึงลูกค้า Shopee 40 ล้านคนมาใช้ได้เลย",
           "โปรโมชั่นราคาถูกดึงลูกค้า",
         ],
         weaknesses: [
-          "ยังเป็น add-on ไม่ใช่ core business",
-          "Rider ไม่เพียงพอในหลายพื้นที่",
+          "เป็นแค่บริการเสริม ไม่ใช่ธุรกิจหลักของ Shopee",
+          "คนส่งอาหารไม่เพียงพอในหลายพื้นที่",
         ],
       },
     ],
@@ -112,9 +112,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 6,
     entryDifficulty: 9,
     description:
-      "ตลาดฟู้ดเดลิเวอรี่ไทยเป็น duopoly ระหว่าง Grab และ LINE MAN ที่ครอง 86% ของตลาด หลัง foodpanda ถอนตัวไปปี 2024 ตลาดรวมกันมีมูลค่า $4.2B ในปี 2024",
+      "ตลาดสั่งอาหารออนไลน์ไทยมีมูลค่ากว่า 143,000 ล้านบาท — แต่ตอนนี้มีแค่ 2 เจ้าใหญ่ คือ Grab กับ LINE MAN ที่แบ่งกัน 86% ของตลาด หลังจาก foodpanda ถอนตัวออกไปแล้ว",
     keyInsight:
-      "ร้านอาหารเจ็บปวดจากค่า GP 30-35% — โอกาสสำหรับ B2B SaaS ที่ช่วยร้านอาหารจัดการ multi-platform + สร้าง direct channel",
+      "ร้านอาหารต้องจ่ายค่าคอมมิชชั่นให้แอปสั่งอาหาร 30-35% ของยอดขาย ซึ่งสูงมาก — โอกาสคือ: ทำซอฟต์แวร์ช่วยร้านอาหารจัดการออร์เดอร์จากทุกแอปในที่เดียว แล้วค่อยๆ สร้างช่องทางขายตรงให้ร้าน",
     source: "Momentum Works 2024, Statista, Bangkok Post",
   },
   {
@@ -181,9 +181,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 5,
     entryDifficulty: 10,
     description:
-      "ตลาดอีคอมเมิร์ซไทยโตจาก 980B เป็น 1,100B THB ในปี 2024 (+14%) Shopee ครอง ~50% ตามด้วย Lazada 30% และ TikTok Shop กำลังมาแรง",
+      "ตลาดซื้อของออนไลน์ไทยมีมูลค่า 1.1 ล้านล้านบาท โตขึ้น 14% จากปีก่อน — Shopee ครองตลาดครึ่งหนึ่ง ตามด้วย Lazada 30% และ TikTok Shop ที่กำลังมาแรงมาก",
     keyInsight:
-      "โอกาสไม่ใช่การแข่งกับ platform ใหญ่ แต่อยู่ที่ e-commerce enabler — tools สำหรับ seller: inventory, multi-channel, analytics, fulfillment",
+      "ไม่ควรไปแข่งกับ Shopee/Lazada โดยตรง แต่โอกาสอยู่ที่: ทำเครื่องมือช่วยคนขายของออนไลน์ เช่น ระบบจัดการสต็อก, เครื่องมือโพสต์ขายหลายแอปพร้อมกัน, ระบบวิเคราะห์ยอดขาย",
     source: "Nation Thailand, Momentum Works, eCommerceDB",
   },
   {
@@ -250,9 +250,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 7,
     entryDifficulty: 8,
     description:
-      "92% ของคนไทยใช้ digital payment แล้ว PromptPay มี 90M+ registrations, TrueMoney ครอง 52.6% ของ e-wallet market ตลาด mobile payments $31.8B ในปี 2024",
+      "คนไทย 92% จ่ายเงินออนไลน์แล้ว พร้อมเพย์มีคนลงทะเบียน 90+ ล้านบัญชี มีการโอนเงิน 74 ล้านครั้งต่อวัน TrueMoney ครองตลาดกระเป๋าเงินดิจิทัลกว่าครึ่ง",
     keyInsight:
-      "แม้ payment จะ saturated แต่ SME financial tools (invoicing, cashflow, expense management) ยังมี gap มหาศาล — SME 3.2M ราย ส่วนใหญ่ยังใช้ Excel",
+      "ตลาดจ่ายเงินออนไลน์เต็มแล้ว แต่ร้านค้าเล็กๆ 3.2 ล้านร้านยังขาดเครื่องมือจัดการเงิน เช่น ระบบออกใบแจ้งหนี้, ดูกระแสเงินสด, บันทึกรายจ่าย — ส่วนใหญ่ยังใช้ Excel",
     source: "Mordor Intelligence, Verified Market Research, Nation Thailand",
   },
   {
@@ -319,9 +319,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 6,
     entryDifficulty: 9,
     description:
-      "ตลาดส่งพัสดุไทยมีมูลค่า 115B THB ส่ง 7-8 ล้านชิ้น/วัน Flash Express และ J&T ครองตลาด ขณะที่ Kerry ขาดทุนหนัก",
+      "ตลาดส่งพัสดุไทยมีมูลค่า 115,000 ล้านบาท ส่งของ 7-8 ล้านชิ้นต่อวัน — Flash Express กับ J&T ครองตลาด ส่วน Kerry ขาดทุนหนักหลายปีติดต่อกัน",
     keyInsight:
-      "โอกาสอยู่ที่ logistics SaaS — warehouse management, route optimization, และ fulfillment-as-a-service สำหรับ SME seller",
+      "โอกาสคือ: ทำซอฟต์แวร์ช่วยร้านค้าออนไลน์จัดการคลังสินค้า, วางแผนเส้นทางส่ง, และบริการแพ็คส่งของแทนร้านค้า",
     source: "Mordor Intelligence, Bangkok Post, Nation Thailand",
   },
   {
@@ -371,9 +371,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 8,
     entryDifficulty: 6,
     description:
-      "60%+ ของ property transactions เริ่มต้นออนไลน์ ตลาด PropTech $1.2B แต่ส่วนใหญ่เป็นแค่ listing portal — ยังขาด end-to-end solution",
+      "กว่า 60% ของคนที่จะซื้อ/เช่าบ้าน-คอนโด เริ่มต้นค้นหาทางออนไลน์ ตลาดรวม 40,800 ล้านบาท — แต่เว็บส่วนใหญ่แค่ลงประกาศ ไม่ได้ช่วยอะไรมากกว่านั้น",
     keyInsight:
-      "Gap ใหญ่: ไม่มีใครทำ end-to-end property transaction + management ครบวงจร (search → compare → contract → management) เหมือน Zillow + Buildium ของไทย",
+      "ยังไม่มีใครทำแอปที่ครบวงจร ตั้งแต่ค้นหาบ้าน → เปรียบเทียบราคา → ทำสัญญา → จัดการห้องเช่าหลังซื้อ — ตรงนี้เป็นช่องว่างใหญ่มาก",
     source: "Ken Research, DDProperty, PropertyGuru Annual Report",
   },
   {
@@ -423,9 +423,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 9,
     entryDifficulty: 7,
     description:
-      "ตลาด telehealth ไทย $1.6B โตเร็วที่สุดที่ CAGR 29.1% แต่ adoption ยังต่ำ ขาดแพลตฟอร์มที่เชื่อมโยงทุกฝ่ายได้จริง",
+      "ตลาดพบหมอออนไลน์ในไทยมีมูลค่า 54,400 ล้านบาท โตเร็วที่สุดในทุกวงการ (29% ต่อปี) — แต่คนไทยส่วนใหญ่ยังไม่ค่อยใช้ เพราะยังไม่มีแอปที่ใช้ง่ายจริงๆ",
     keyInsight:
-      "คลินิกเล็ก 20,000+ แห่งยังใช้กระดาษ — โอกาสสำหรับ Clinic SaaS (EHR + นัดหมาย + telemedicine + จ่ายยา) แบบ subscription ราคาถูก",
+      "คลินิกเล็กๆ กว่า 20,000 แห่งทั่วไทยยังใช้กระดาษจดข้อมูลคนไข้ — โอกาสคือ: ทำซอฟต์แวร์ราคาถูกให้คลินิกจัดการนัดหมาย, บันทึกประวัติคนไข้, ปรึกษาหมอทางวิดีโอ, สั่งยาส่งบ้าน ครบในแอปเดียว",
     source: "Grand View Research, Research and Markets, True Blog",
   },
   {
@@ -474,9 +474,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 7,
     entryDifficulty: 5,
     description:
-      "EdTech ไทยยังกระจัดกระจาย ไม่มีผู้เล่นรายใหญ่ที่ครองตลาดจริงๆ K-12 กำลังโต 15% CAGR แต่ส่วนใหญ่ยังเป็น offline tutoring",
+      "ตลาดเรียนออนไลน์ไทยมีมูลค่า 59,700 ล้านบาท ยังกระจัดกระจายไม่มีเจ้าไหนครองตลาดเด็ดขาด — การเรียนพิเศษส่วนใหญ่ยังเป็นแบบเจอตัวไม่ใช่ออนไลน์",
     keyInsight:
-      "Upskilling/Reskilling สำหรับ workforce เป็น gap ใหญ่ — โดยเฉพาะ digital skills, AI, data ที่บริษัทต้องการแต่หาคนไม่ได้",
+      "ช่องว่างใหญ่คือ: คอร์สพัฒนาทักษะสำหรับคนทำงาน โดยเฉพาะทักษะดิจิทัล, AI, วิเคราะห์ข้อมูล — ที่บริษัทต้องการคนเป็นแต่หาไม่ได้",
     source: "Technavio, Startup in Thailand, 6W Research",
   },
   {
@@ -526,9 +526,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 8,
     entryDifficulty: 5,
     description:
-      "ตลาด HR Tech ไทย $260M กำลังโต แต่ส่วนใหญ่ยังเป็นแค่ job boards ไม่มี all-in-one HR platform สำหรับ SME",
+      "ตลาดเทคโนโลยีด้านบุคคล (หาคน จัดการพนักงาน) มีมูลค่า 8,840 ล้านบาท กำลังโต — แต่ที่มีอยู่ตอนนี้เป็นแค่เว็บหางาน ยังไม่มีระบบจัดการพนักงานครบวงจรสำหรับบริษัทเล็ก",
     keyInsight:
-      "SME ไทย 3.2M ราย ส่วนใหญ่ยังทำ HR ด้วยมือ — payroll, ลาหยุด, สัญญาจ้าง, ประกันสังคม ทำบน Excel ทั้งหมด โอกาสสำหรับ HRIS SaaS ราคา SME",
+      "บริษัทเล็กๆ 3.2 ล้านรายในไทย ส่วนใหญ่ยังใช้ Excel จัดการเงินเดือน ลาหยุด สัญญาจ้าง ประกันสังคม — โอกาสคือทำระบบ HR ออนไลน์ราคาถูกที่ทำทุกอย่างนี้ครบในที่เดียว",
     source: "Ken Research, Bangkok Post, Manatal",
   },
   {
@@ -581,9 +581,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 9,
     entryDifficulty: 4,
     description:
-      "ตลาด SaaS ไทย $440M โต 20.76% CAGR แต่ SME 3.2M รายส่วนใหญ่ยังไม่ใช้ cloud software — penetration ต่ำมาก",
+      "ตลาดซอฟต์แวร์บนคลาวด์สำหรับธุรกิจไทยมีมูลค่า 15,000 ล้านบาท โตเร็วกว่า 20% ต่อปี — แต่ร้านค้า/บริษัทเล็กๆ 3.2 ล้านรายส่วนใหญ่ยังไม่ใช้ ยังพึ่ง Excel กับกระดาษ",
     keyInsight:
-      "โอกาสทอง: All-in-one SME OS (บัญชี + POS + inventory + payroll + CRM) ที่ทำให้ SME เปลี่ยนจาก Excel เป็น cloud ได้ใน 1 วัน — ตลาดที่ PEAK/FlowAccount ยังทำไม่ครบ",
+      "โอกาสทอง: ทำแอปจัดการร้านค้าครบในตัวเดียว (บัญชี + ขายหน้าร้าน + จัดการสต็อก + เงินเดือนพนักงาน + จัดการลูกค้า) ที่ใช้ง่ายจนเปลี่ยนจาก Excel มาใช้ได้ภายในวันเดียว — PEAK ทำแค่บัญชี FlowAccount ก็ยังทำไม่ครบ",
     source: "Statista, GetLatka, FlowAccount",
   },
   {
@@ -616,9 +616,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 6,
     entryDifficulty: 7,
     description:
-      "AgriTech ไทยยังเล็กมาก $80M แต่ agriculture คือ 8.5% ของ GDP ไทย มีเกษตรกร 12M คน startup 81 ราย แต่ส่วนใหญ่ยังอยู่ stage เริ่มต้น",
+      "เทคโนโลยีเกษตรไทยยังเล็กมาก (2,730 ล้านบาท) ทั้งที่การเกษตรคือ 8.5% ของเศรษฐกิจไทย มีเกษตรกร 12 ล้านคน มี startup แค่ 81 ราย ส่วนใหญ่ยังเริ่มต้น",
     keyInsight:
-      "โอกาสที่ farmer-facing app ไม่ใช่ทางออก — ควร focus B2B: supply chain traceability, IoT monitoring สำหรับ food processors + exporters ที่ต้อง comply กับมาตรฐานส่งออก",
+      "การทำแอปให้เกษตรกรใช้โดยตรงทำได้ยาก เพราะหลายคนไม่คุ้นเทคโนโลยี — ทางที่ดีกว่าคือทำระบบตรวจสอบย้อนกลับสินค้าเกษตรและระบบ IoT ติดตามคุณภาพ สำหรับโรงงานแปรรูป/ผู้ส่งออกที่ต้องทำตามมาตรฐานส่งออก",
     source: "IMARC Group, GlobeNewsWire, AGROWTH Platform",
   },
   {
@@ -668,9 +668,9 @@ export const sectors: SectorData[] = [
     opportunityScore: 6,
     entryDifficulty: 8,
     description:
-      "ตลาดท่องเที่ยวออนไลน์ $3.56B ในปี 2024 — Agoda ครอง 69% ของผู้ใช้ OTA ไทย รายได้ท่องเที่ยวในประเทศ 952B THB ในปี 2024 โต 11.64%",
+      "ตลาดจองที่พัก/ท่องเที่ยวออนไลน์ในไทยมีมูลค่า 121,000 ล้านบาท — Agoda ครองไป 69% ของคนไทยที่ใช้จองที่พักออนไลน์ รายได้ท่องเที่ยวในประเทศ 952,000 ล้านบาทต่อปี",
     keyInsight:
-      "โอกาสอยู่ที่ B2B: Hospitality SaaS สำหรับโรงแรม/รีสอร์ทขนาดเล็ก (PMS + channel manager + revenue management) ที่ยังใช้ Excel จัดการ",
+      "โอกาสไม่ใช่การแข่งกับ Agoda โดยตรง แต่อยู่ที่: ทำซอฟต์แวร์จัดการโรงแรม/รีสอร์ทเล็กๆ (จัดการห้อง + โพสต์ขายหลายเว็บ + วิเคราะห์ราคา) ที่ยังใช้สมุดจดหรือ Excel อยู่",
     source: "IMARC Group, Bloomberg, Ken Research, Statista",
   },
 ];

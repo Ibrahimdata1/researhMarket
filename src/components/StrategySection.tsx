@@ -26,10 +26,10 @@ function RevenueProjectionChart() {
   return (
     <div className="card p-4 md:p-6">
       <h3 className="text-lg font-semibold mb-1">
-        คาดการณ์รายได้ RunawayTech (ล้าน THB)
+        คาดการณ์รายได้ RunawayTech (ล้านบาท)
       </h3>
       <p className="text-muted text-sm mb-4">
-        3 สถานการณ์: Conservative / Moderate / Aggressive (รวมทุก product line)
+        3 สถานการณ์: แบบระวัง / แบบปกติ / แบบเร่งสุด (รวมทุกผลิตภัณฑ์)
       </p>
       <ResponsiveContainer width="100%" height={350}>
         <AreaChart data={revenueProjection} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
@@ -48,7 +48,7 @@ function RevenueProjectionChart() {
           <Area
             type="monotone"
             dataKey="aggressive"
-            name="Aggressive"
+            name="เร่งสุด"
             stroke="#4ade80"
             fill="#4ade80"
             fillOpacity={0.15}
@@ -57,7 +57,7 @@ function RevenueProjectionChart() {
           <Area
             type="monotone"
             dataKey="moderate"
-            name="Moderate"
+            name="ปกติ"
             stroke="#C87941"
             fill="#C87941"
             fillOpacity={0.2}
@@ -66,7 +66,7 @@ function RevenueProjectionChart() {
           <Area
             type="monotone"
             dataKey="conservative"
-            name="Conservative"
+            name="ระวัง"
             stroke="#888888"
             fill="#888888"
             fillOpacity={0.1}
@@ -114,19 +114,19 @@ function StrategyCard({ strategy, rank }: { strategy: StrategyRec; rank: number 
       {/* Always-visible quick stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
         <div className="p-2 rounded-lg bg-surface-light text-center">
-          <div className="text-muted text-[10px]">Target Market</div>
+          <div className="text-muted text-[10px]">กลุ่มเป้าหมาย</div>
           <div className="text-xs font-semibold mt-0.5">{strategy.targetMarket.split(" ").slice(0, 4).join(" ")}...</div>
         </div>
         <div className="p-2 rounded-lg bg-surface-light text-center">
-          <div className="text-muted text-[10px]">TAM</div>
+          <div className="text-muted text-[10px]">ขนาดตลาดรวม</div>
           <div className="text-accent font-mono text-xs font-bold mt-0.5">{strategy.tam.split(" ")[0]}</div>
         </div>
         <div className="p-2 rounded-lg bg-surface-light text-center">
-          <div className="text-muted text-[10px]">แย่งได้</div>
+          <div className="text-muted text-[10px]">แย่งมาได้ประมาณ</div>
           <div className="text-green font-mono text-xs font-bold mt-0.5">{strategy.capturable.split("=")[1]?.trim().split(" ")[0]}</div>
         </div>
         <div className="p-2 rounded-lg bg-surface-light text-center">
-          <div className="text-muted text-[10px]">Revenue Y3</div>
+          <div className="text-muted text-[10px]">รายได้ปีที่ 3</div>
           <div className="text-accent font-mono text-xs font-bold mt-0.5">{strategy.revenueY3.split(" ")[0]}</div>
         </div>
       </div>
@@ -137,25 +137,25 @@ function StrategyCard({ strategy, rank }: { strategy: StrategyRec; rank: number 
           <div className="grid md:grid-cols-2 gap-3">
             <div className="p-3 rounded-lg bg-surface-light">
               <div className="flex items-center gap-1.5 text-accent text-xs font-semibold mb-2">
-                <Target size={12} /> Target Market
+                <Target size={12} /> กลุ่มเป้าหมาย
               </div>
               <p className="text-sm text-foreground">{strategy.targetMarket}</p>
               <div className="mt-2 text-xs text-muted">
-                <span className="font-semibold text-accent">TAM:</span> {strategy.tam}
+                <span className="font-semibold text-accent">ขนาดตลาดรวม:</span> {strategy.tam}
               </div>
               <div className="text-xs text-muted">
-                <span className="font-semibold text-green">Capturable:</span> {strategy.capturable}
+                <span className="font-semibold text-green">แย่งมาได้:</span> {strategy.capturable}
               </div>
             </div>
             <div className="p-3 rounded-lg bg-surface-light">
               <div className="flex items-center gap-1.5 text-accent text-xs font-semibold mb-2">
-                <DollarSign size={12} /> Revenue Model
+                <DollarSign size={12} /> ราคาและรายได้
               </div>
               <p className="text-sm text-foreground">
-                <span className="font-semibold">Pricing:</span> {strategy.pricing}
+                <span className="font-semibold">ราคาต่อเดือน:</span> {strategy.pricing}
               </p>
               <p className="text-sm text-muted mt-1">
-                <span className="font-semibold text-foreground">Y3 Target:</span> {strategy.revenueY3}
+                <span className="font-semibold text-foreground">เป้ารายได้ปีที่ 3:</span> {strategy.revenueY3}
               </p>
             </div>
           </div>
