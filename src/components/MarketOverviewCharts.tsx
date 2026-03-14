@@ -67,7 +67,7 @@ export function MarketSizeChart() {
         </BarChart>
       </ResponsiveContainer>
       <p className="text-muted text-[10px] mt-2 italic">
-        * ข้อมูลจาก Mordor Intelligence, Statista, Momentum Works, Ken Research ปี 2024
+        * ข้อมูลจาก Mordor Intelligence, Statista, Momentum Works, Ken Research — อัพเดตล่าสุด มี.ค. 2026
       </p>
     </div>
   );

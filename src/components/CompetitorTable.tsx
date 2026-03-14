@@ -47,7 +47,7 @@ export default function CompetitorTable() {
         </table>
       </div>
       <p className="text-muted text-[10px] italic">
-        * ข้อมูลจากรายงานประจำปี, Momentum Works, Statista, GetLatka, Bangkok Post, Nation Thailand ปี 2024
+        * ข้อมูลจากรายงานประจำปี, Momentum Works, Statista, GetLatka, Bangkok Post, Nation Thailand — อัพเดตล่าสุด มี.ค. 2026
       </p>
     </div>
   );
