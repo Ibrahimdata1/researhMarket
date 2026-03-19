@@ -293,8 +293,8 @@ const halalBusinessOpportunities = [
 const businessComparisonData = [
   { metric: "รายได้", fullMark: 10 },
   { metric: "ทำง่าย", fullMark: 10 },
-  { metric: "เรียนศาสนาควบคู่", fullMark: 10 },
-  { metric: "เส้นทางสู่ซาอุฯ", fullMark: 10 },
+  { metric: "เรียนควบคู่", fullMark: 10 },
+  { metric: "สู่ซาอุฯ", fullMark: 10 },
 ];
 
 // Saudi Arabia Vision 2030 career paths
@@ -351,12 +351,12 @@ const saudiCareerPaths = [
 
 // Daily schedule balance
 const dailySchedule = [
-  { name: "ฟัจร์ + อิบาดะฮ์เช้า", hours: 1.5, color: "#4ade80" },
-  { name: "เรียนศาสนา / อ่านหนังสือ", hours: 4, color: "#60a5fa" },
-  { name: "ทำงาน / ธุรกิจ", hours: 5, color: "#C87941" },
-  { name: "ละหมาด ซุฮ์ร + อัศร์ + มัฆริบ", hours: 1.5, color: "#4ade80" },
-  { name: "พักผ่อน / ครอบครัว", hours: 3, color: "#a78bfa" },
-  { name: "มุรอญะอะฮ์ + อิชาอ์ + กิยามุลลัยล์", hours: 2, color: "#4ade80" },
+  { name: "ฟัจร์ + อิบาดะฮ์", hours: 1.5, color: "#4ade80" },
+  { name: "เรียนศาสนา", hours: 4, color: "#60a5fa" },
+  { name: "ทำงาน/ธุรกิจ", hours: 5, color: "#C87941" },
+  { name: "ซุฮ์ร+อัศร์+มัฆริบ", hours: 1.5, color: "#4ade80" },
+  { name: "พักผ่อน/ครอบครัว", hours: 3, color: "#a78bfa" },
+  { name: "อิชาอ์+กิยามุลลัยล์", hours: 2, color: "#4ade80" },
   { name: "นอน", hours: 7, color: "#2a2a2a" },
 ];
 
@@ -543,8 +543,8 @@ function Top3RadarChart() {
       const key = b.id;
       if (m.metric === "รายได้") row[key] = b.incomeScore;
       if (m.metric === "ทำง่าย") row[key] = b.easeScore;
-      if (m.metric === "เรียนศาสนาควบคู่") row[key] = b.studyFriendly;
-      if (m.metric === "เส้นทางสู่ซาอุฯ") row[key] = b.saudiPath;
+      if (m.metric === "เรียนควบคู่") row[key] = b.studyFriendly;
+      if (m.metric === "สู่ซาอุฯ") row[key] = b.saudiPath;
     });
     return row;
   });
@@ -559,11 +559,11 @@ function Top3RadarChart() {
       <p className="text-muted text-sm mb-4">
         ยิ่งกว้าง = ยิ่งดีในทุกด้าน (รายได้, ทำง่าย, เรียนศาสนาได้, ต่อยอดซาอุฯ)
       </p>
-      <ResponsiveContainer width="100%" height={350}>
-        <RadarChart data={radarData}>
+      <ResponsiveContainer width="100%" height={320}>
+        <RadarChart data={radarData} cx="50%" cy="45%" outerRadius="65%">
           <PolarGrid stroke="#2a2a2a" />
-          <PolarAngleAxis dataKey="metric" tick={{ fontSize: 12, fill: "#ccc" }} />
-          <PolarRadiusAxis angle={90} domain={[0, 10]} tick={{ fontSize: 10, fill: "#888" }} />
+          <PolarAngleAxis dataKey="metric" tick={{ fontSize: 11, fill: "#ccc" }} />
+          <PolarRadiusAxis angle={90} domain={[0, 10]} tick={{ fontSize: 9, fill: "#888" }} />
           {top3.map((b, i) => (
             <Radar
               key={b.id}
@@ -575,10 +575,18 @@ function Top3RadarChart() {
               strokeWidth={2}
             />
           ))}
-          <Legend />
           <Tooltip contentStyle={tooltipStyle} />
         </RadarChart>
       </ResponsiveContainer>
+      {/* Legend outside chart to prevent overlap */}
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mt-2 text-xs text-muted">
+        {top3.map((b, i) => (
+          <div key={b.id} className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded" style={{ backgroundColor: colors[i] }} />
+            <span>{b.name}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -593,21 +601,22 @@ function DailyScheduleChart() {
       <p className="text-muted text-sm mb-4">
         ตัวอย่างการแบ่งเวลา 24 ชม. — เรียนศาสนา 4 ชม. + อิบาดะฮ์ 5 ชม. + ทำงาน 5 ชม.
       </p>
-      <div className="space-y-2">
+      <div className="space-y-3">
         {dailySchedule.map((item) => (
-          <div key={item.name} className="flex items-center gap-3">
-            <div className="w-32 md:w-48 text-sm text-muted shrink-0 truncate">{item.name}</div>
-            <div className="flex-1 h-7 bg-surface-light rounded-full overflow-hidden">
+          <div key={item.name}>
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-xs text-muted">{item.name}</span>
+              <span className="text-xs font-bold" style={{ color: item.color === "#2a2a2a" ? "#888" : item.color }}>{item.hours} ชม.</span>
+            </div>
+            <div className="w-full h-5 bg-surface-light rounded-full overflow-hidden">
               <div
-                className="h-full rounded-full flex items-center justify-end pr-2 text-xs font-bold text-background"
+                className="h-full rounded-full"
                 style={{
                   width: `${(item.hours / total) * 100}%`,
                   backgroundColor: item.color,
-                  minWidth: "40px",
+                  minWidth: "8px",
                 }}
-              >
-                {item.hours} ชม.
-              </div>
+              />
             </div>
           </div>
         ))}
