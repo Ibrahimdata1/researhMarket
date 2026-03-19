@@ -8,6 +8,7 @@ const links = [
   { href: "#sectors", label: "แต่ละวงการ" },
   { href: "#competitors", label: "ตารางคู่แข่ง" },
   { href: "#strategy", label: "แผนธุรกิจ" },
+  { href: "#halal", label: "ฮาลาล & อาชีพ" },
   { href: "#sources", label: "แหล่งข้อมูล" },
 ];
 

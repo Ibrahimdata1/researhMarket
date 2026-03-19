@@ -5,6 +5,7 @@ import { MarketSizeChart, GrowthRateChart, OpportunityMatrixChart } from "@/comp
 import SectorAnalysis from "@/components/SectorAnalysis";
 import CompetitorTable from "@/components/CompetitorTable";
 import StrategySection from "@/components/StrategySection";
+import HalalCareerSection from "@/components/HalalCareerSection";
 import { digitalEconomyOverview } from "@/lib/data";
 
 export default function Home() {
@@ -257,6 +258,24 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* Section: Halal Career & Business */}
+      <section id="halal" className="max-w-6xl mx-auto px-4 py-12">
+        <div className="mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">
+            <span className="gradient-text">อาชีพ & ธุรกิจฮาลาล</span> สำหรับนักเรียนศาสนา
+          </h2>
+          <p className="text-muted max-w-3xl">
+            วิเคราะห์เชิงลึก: ทำงานที่ไหนในไทยที่ฮาลาลและ Muslim-friendly?
+            ทำธุรกิจอะไรที่ฮาลาล ได้เงินดี ทำง่าย แล้วยังบาลานซ์กับการเรียนศาสนาเป็นอุละมาอ์ได้?
+            พร้อมเส้นทางสู่ซาอุดีอาระเบีย (ฮิจเราะฮ์) ด้วยทักษะดุนยาที่แข็งแกร่ง
+          </p>
+        </div>
+
+        <HalalCareerSection />
       </section>
 
       <div className="section-divider" />
